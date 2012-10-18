@@ -1,0 +1,138 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{natbib}
+
+\theoremstyle{definition}
+\newtheorem{dfn}{Definition}
+
+\begin{document}
+
+% The numbers below controls the amount of space between the following sections
+\def\shiftdowna{0.32in}  % Adjust for balance
+\def\shiftdownb{0.22in}  % Adjust for balance
+
+% Set up the boiler plate at the top of the page
+
+\begin{center}
+\textbf{{\large Project Work Statement}}\\
+
+
+% SPONSOR
+\vspace \shiftdowna
+\underline {Sponsor}\\ 
+\vspace{5pt}
+\textbf{{\large Banana Republic}}\\
+
+
+% TITLE
+\vspace \shiftdowna
+\textbf{{\large Modeling the "Wedress" Daily Dressing Tips}}
+
+
+% STUDENTS
+\vspace{0.35in}
+\vspace \shiftdownb
+\underline {Participants} \\
+\vspace{5pt}
+\text{Rong Fan}, \texttt{rfan4@jhu.edu}
+
+% SPONSORS
+\vspace \shiftdownb
+\underline {Potential Participants}\\
+\vspace{5pt}
+Huinan Zhang, \texttt{hzhang43@jhu.edu} \\
+\vspace{3pt}
+\text{Jing Huang}, \texttt{jhuang23@jhu.edu} \\
+
+
+% DATE
+\vspace \shiftdowna
+Date: \today
+
+\end{center}
+
+\vfill  
+%Fill page to force following note to bottom
+\footnoterule
+\noindent \small{Any apparent association of this work to Banana Republic is
+fictional one, and the sole purpose of this work is a class exercise}
+
+\newpage
+
+\section{Background} 
+The original Banana Republic was founded by Mel and Patricia Ziegler in 1978. It was a two-store safari and travel themed clothing company. The majority of sales came from its eccentric, hand-illustrated catalog, which presented high-end and unique items with chatty, usually fictional backstories from exotic locations, as well as more pedestrian high-volume products deliberately spiced up with a similar treatment. Many of the backstories were written by well-known authors including Cyra McFadden, author also of "The Serial and Rain or Shine". As Banana Republic expanded its retail operation, it became known for the themed decoration in its stores, often featuring authentic elements, such as real Jeeps and foliage, as well as atmospheric elements, such as fog and steam. The Gap, Inc. acquired Banana Republic in 1983, eventually rebranding it as a mainstream luxury clothing retailer. The literate articles, hand-drawn catalogue, and eccentric tourist-oriented items were phased out and were replaced with more luxurious, but less unique, items for which the brand is currently known (as of 2012). As of the end of Q1 2011, Banana Republic had 642 company owned or franchised stores in operation across 32 countries, shipped to 20 countries through company owned websites, and had the ability to ship to more than 50 countries through a 3rd party. Now BR wants to do some thing for the mobile users.
+
+
+\section{Problem Statement}
+Cellphone is widely used nowadays and many companies started to target the cellphone users. However it is difficult to advertise through cellphones. The conventional way of cellphone commercials is pop-out advertisement free mobile apps or mobile web, which gets a lot of critic and will possibly damage the brand image.
+\\ 
+Banana Republic launched an app on Apple Store this year, which customers can shop through the app. However, the app did not has a good user rating(only 3 stars on Apps Store). Additionally, the sales data did not show improvement after the app was launched for more than a year. Therefore, Banana Republic is seeking a new solution to grow customer loyalty.
+\\\\
+The app that Banana Republic wants can:
+\\
+1. Create positive brand image
+\\
+The public's perception will come from every interaction your company has, so it is important to interact with users. Delivering an interesting experience with the app will make good impression in clients’ mind.
+\\
+\newpage
+\noindent 2. Develop customer loyalty
+\\
+Receiving feedback and giving constant adjustment is the commonly recognized way to gain customer loyalty. By personalizing and learning, the app will be able to give customized experience to clients and will increase daily usage.
+\\
+\\
+3. Bring profit to the company
+\\
+The core of the app is to build profitable connection with customers. After launching the app, Banana Republic should continuously monitor the sales data and keep updating the app.
+
+\section{Approach}
+\underline {Idea of "Wedress"} \\
+\\
+My idea is to develop a mobile application, named "Wedress", combining the weather forcast and dressing tips. This app would not only gives the daily weather report but also shows users what they should put on in oder to keep their body comfortable. The product images from Banana Republic will be used in listing the dressing tips. That is a good way to let people know what's new on broad from BR.
+\\\\
+ \noindent\underline {Mathematicial Model} \\
+\\
+The main model will be the logistic regression. Inputs of the logistic regression will be the weather information like temperature, humidity and wind. Output is a number, which will be used in finding the dressing combination. The sub model would be a selection method. All clothes have a weight value. The method is to pick out some sets of clothes, whose total weight would be close to the number we get from the regression. Next part would be about how to use data to assign all the coefficients and weights.
+\\\\
+ \noindent\underline {Mathematicial Data} \\
+\\
+There will be two kinds of data. One is pre-data, the one used in developing the app. We will invite people to do surveys. In each survey, we will have, “a.What’s the weather like today?”, “b.What’s the interviewee dressing?”, “c.How does he/she feel about the weather?”, “d.How does he/she feel about his/her dress today?”. In question c and d, there are five answers to choose, not comfortable at all, a little uncomfortable, no feeling, feel comfortable, and very comfortable. Each answer implies a result from regression model. For example, “very comfortable” equals to 1, and “not comfortable at all” equals to 0. We will use a and c to build the regression and b and d to decide the weight. The other part of the data is post-data, collected from users feed back. At the end of every day, the app will ask users what did they put on today and how did they feel? This information would be used in adjusting the model. New regression will be build based on both data. This kind of adjusting will be personalized.
+
+\section{Milestones}
+We have the following major deadlines:
+\begin{itemize}
+    \item Work Statement due date, Sep 28, 2012,
+    \item Midterm Presentation due date, Oct 12, 2012,
+    \item Progress Report due date, Oct 26, 2012,
+    \item Final Presentation due date, Nov 6, 2012,
+    \item Final Report and R package due date, Nov 30, 2012,
+
+\end{itemize}
+
+\section{Deliverable}
+\subsection{From Team to Sponsor} % (fold)
+The following outputs are expected from this project:
+\begin{itemize}
+    \item Algorithms for tips generating and self-modify system
+    \item Numerical experiment results reporting performance of the developed algorithms
+    \item R package of the regressiong model and selection method
+\end{itemize}
+
+\subsection{From Sponsor to Team} % (fold)
+
+In order for our project to be of successful one, we will need:
+\begin{itemize}
+    \item Images for latest products
+    \item Comments about the processing
+\end{itemize}
+
+
+%\newpage
+%\bibliographystyle{plain}
+%%\renewcommand\bibname{Selected Bibliography Including Cited Works}
+%\nocite{*}
+%\bibliography{biblio}
+
+\end{document}
